@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+}
+body{
+  width: 100%;
+  overflow: auto;
+  font-size: 14px;
+  background-color: #F9EBE0;
+}
+
+span, button{
+  font-size: 1rem;
+  word-spacing: 0.2rem;
+  letter-spacing: 0.07rem;
+}
+.spacing-0{
+  word-spacing: 0 !important;
+  letter-spacing: 0 !important;
+}
+.bg-card-custom{
+  background-color: #edf6f9
+}
+.bg-custom{
+  background-color: #edd5c3;
+}
+.navbar-nav{
+  --bs-nav-link-padding-y: 0.2rem !important;
+}
+.design{
+  position: absolute;
+  transform: rotate3d(2,2,1, 35deg);
+  z-index: -10;
+  left: -10%;
+  top:20%;
+  height: 200px;
+  width: 150%;
+  background-color: aliceblue;
+}
+.img-width-125{
+  width: 125px;
+}
+.heading-text{
+  font-size: 3.5rem;
+  font-family: 'Righteous', sans-serif;
+  line-height: 4.2rem;
+}
+.pre-heading-text{
+  font-family: 'Righteous', sans-serif;
+  font-size: 2.3rem;
+  line-height: 3rem;
+}
+.fw-100{
+  font-weight: 100;
+}
+.semi-heading-text{
+  font-size: 1.5rem;
+}
+.text-justify{
+  text-align: justify;
+}
+.box-align-center{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.flex-item-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.accordion {
+  background-color: rgb(35, 34, 34);
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  transition: 0.4s;
+}
+.active{
+  background-color: rgb(35, 34, 34);
+}
+.accordion:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+.active:after {
+  content: "\2212";
+}
+.panel {
+  padding: 0 18px;
+  background-color: rgb(35, 34, 34);
+  max-height: 0;
+  overflow: hidden;
+  color: white;
+  transition: max-height 0.2s ease-out;
+}
