@@ -123,3 +123,9 @@ span, button{
   color: white;
   transition: max-height 0.2s ease-out;
 }
+
+@media (max-width: 991.9px) {
+  .about-div {
+    background: none;
+  }
+}
