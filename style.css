@@ -9,7 +9,11 @@ body{
   width: 100%;
   overflow: auto;
   font-size: 14px;
-  background-color: #F9EBE0;
+  /* background-color: #F9EBE0; */
+  background: #4776E6;
+  background: -webkit-linear-gradient(to right, #8E54E9, #4776E6);
+  background: linear-gradient(to right, #8E54E9, #4776E6);
+  color: white;
 }
 
 span, button{
@@ -23,16 +27,19 @@ span, button{
   letter-spacing: 0 !important;
 }
 .bg-card-custom{
-  background-color: #edf6f9
+  background: #95b8ec70;
 }
 .bg-custom{
-  background-color: #edd5c3;
+  background-color: #af9de570;
 }
 .navbar-nav{
   --bs-nav-link-padding-y: 0.2rem !important;
 }
 .about-div{
-  background: no-repeat center/50% url("images/about_image.png");
+  background: no-repeat right/50% url("images/home3.png");
+}
+.text-shadow{
+  text-shadow: 2px 2px 4px black;
 }
 .design{
   position: absolute;
