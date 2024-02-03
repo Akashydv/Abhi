@@ -22,6 +22,10 @@ span, button{
   word-spacing: 0.2rem;
   letter-spacing: 0.07rem;
 }
+.modal li{
+  font-size: 1rem;
+  padding-bottom: 0.25rem;
+}
 .spacing-0{
   word-spacing: 0 !important;
   letter-spacing: 0 !important;

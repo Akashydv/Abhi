@@ -4,13 +4,15 @@
     <title>Infidio</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet" /> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="images/circle-notch.svg">
     <script src="js/main.js"></script>
   </head>
   <body>
     <div class="container-fluid mb-2 mb-lg-5 mt-2">
-      <nav class="navbar navbar-expand-lg px-4">
+      <nav class="navbar navbar-expand-lg px-lg-4">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
             <img src="images/logo_white.png" class="img-width-125"/>
@@ -45,9 +47,16 @@
                 </a>
               </li>
             </ul>
-            <button class="btn btn-dark">
-              <img width="25" height="25" src="https://img.icons8.com/plasticine/25/000000/product-documents.png" alt="product-documents"/>
-              Hire us</button>
+            <div class="dropdown">
+              <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img width="25" height="25" src="https://img.icons8.com/plasticine/25/000000/product-documents.png" alt="product-documents"/>
+                Hire us
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" data-bs-toggle="offcanvas" href="#brand_offcanvas_form" role="button" aria-controls="offcanvasExample">Brand</a></li>
+                <li><a class="dropdown-item" data-bs-toggle="offcanvas" href="#influencer_offcanvas_form" role="button" aria-controls="offcanvasExample">Influencer</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </nav>
@@ -483,20 +492,427 @@
             </div>
           </div>
           <div class="col-12 d-flex flex-wrap pt-4 pb-3">
-            <div class="col-5">
+            <div class="col-4 d-none d-lg-block">
               <span class="text-secondary">© 2024 Infidio LLC. All rights reserved.</span>
             </div>
-            <div class="col-7 d-flex justify-content-evenly">
-              <span class="text-secondary text-center text-decoration-underline">Terms of Service</span>
-              <span class="text-secondary text-end text-decoration-underline">Privacy Policy</span>
+            <div class="col-12 col-lg-8 d-flex justify-content-evenly">
+              <a href="#" class="text-secondary text-center text-decoration-underline" data-bs-target="#terms_and_conditions" 
+                data-bs-toggle="modal">Terms of Service</a>
+              <a href="#" class="text-secondary text-end text-decoration-underline" data-bs-target="#privacy_policy" 
+              data-bs-toggle="modal">Privacy Policy</a>
+              <a href="#" class="text-secondary text-center text-decoration-underline" data-bs-target="#terms_and_conditions_for_affilated_links" 
+                data-bs-toggle="modal">Terms of Service(affiliated links)</a>
+            </div>
+            <div class="col-12 d-block d-md-block d-lg-none d-xl-none pt-3 text-center">
+              <span class="text-secondary">© 2024 Infidio LLC. All rights reserved.</span>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <script src="js/bootstrap.min.js"></script>
+    
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="brand_offcanvas_form" aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-header border-bottom">
+        <h5 class="offcanvas-title">BRAND</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="mt-3 mb-4">
+          <h6 class="text-secondary">SUBMIT YOUR APPLICATION</h6>
+          <!-- <span class="fst-italic">to let us know about your queries.</span> -->
+        </div>
+        <div class="dropdown mt-3">
+          <div class="col-12">
+            <form>
+              <div class="mb-2">
+                <label class="form-label">Name</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="mb-2">
+                <label class="form-label">Email address</label>
+                <input type="email" class="form-control">
+              </div>
+              <div class="mb-2">
+                <label class="form-label">Mobile</label>
+                <input type="number" class="form-control">
+              </div>
+              <div class="mb-2 pb-3 border-bottom">
+                <label class="form-label">Message</label>
+                <textarea class="form-control" id="" rows="3"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary float-end rounded-0 mt-2">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="influencer_offcanvas_form" aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-header border-bottom">
+        <h5 class="offcanvas-title">INFLUENCER</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="mt-3 mb-4">
+          <h6 class="text-secondary">SUBMIT YOUR APPLICATION</h6>
+          <!-- <span class="fst-italic">to let us know about your queries.</span> -->
+        </div>
+        <div class="dropdown mt-3">
+          <div class="col-12">
+            <form>
+              <div class="mb-2">
+                <label class="form-label">Name</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="mb-2">
+                <label class="form-label">Email address</label>
+                <input type="email" class="form-control">
+              </div>
+              <div class="mb-2">
+                <label class="form-label">Mobile</label>
+                <input type="number" class="form-control">
+              </div>
+              <div class="mb-2 pb-3 border-bottom">
+                <label class="form-label">Message</label>
+                <textarea class="form-control" id="" rows="3"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary rounded-0 float-end mt-2">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="privacy_policy" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 text-dark">Privacy Policy for Infidio</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-dark">
+            <div class="col-12 mb-3">
+              <h5 class="text-decoration-underline">Introduction</h5>
+              <span class="spacing-0">
+                Welcome to Infidio ("we," "us," or "our"). This Privacy Policy outlines how we collect, use, disclose, and protect your personal information. By using our services, you agree to the terms outlined in this policy.
+              </span>
+            </div>
+            <div class="col-12 my-3">
+              <h5 class="text-decoration-underline">Information We Collect</h5>
+              <span class="spacing-0">
+                <ul class="ps-3">
+                  <li><strong>Personal Information: </strong>We may collect personal information such as names, addresses, email addresses, phone numbers, and other relevant details.</li>
+                  <li><strong>Non-Personal Information: </strong>We may also collect non-personal information, including but not limited to browser type, IP addresses, and usage data.</li>
+                </ul>
+              </span>
+            </div>
+            <div class="col-12 my-3">
+              <h5 class="text-decoration-underline">How We Collect Information</h5>
+              <span class="spacing-0">
+                We may collect information through various methods, including:
+                <ul>
+                  <li>Direct interactions (e.g., when you provide information on our website or through our services)</li>
+                  <li>Automated technologies (e.g., cookies and web beacons)</li>
+                  <li>Third-party sources (e.g., business partners, social media platforms)</li>
+                </ul>
+              </span>
+            </div>
+            <div class="col-12 my-3">
+              <h5 class="text-decoration-underline">Use of Information</h5>
+              <span class="spacing-0">
+                We use collected information for purposes such as:
+                <ul>
+                  <li>Providing and improving our services</li>
+                  <li>Customizing content and marketing efforts</li>
+                  <li>Communicating with you</li>
+                  <li>Conducting analytics and research</li>
+                </ul>
+              </span>
+            </div>
+            <div class="col-12 my-3">
+              <h5 class="text-decoration-underline">Disclosure of Information</h5>
+              <span  class="spacing-0">
+                We may share your information with:
+                <ul>
+                  <li>Service providers and business partners</li>
+                  <li>Legal and regulatory authorities when required</li>
+                  <li>In connection with a business transaction (e.g., merger, acquisition)</li>
+                </ul>
+              </span>
+            </div>
+            <div class="col-12 my-3">
+              <h5 class="text-decoration-underline">Cookies and Tracking Technologies</h5>
+              <span class="spacing-0">
+                We use cookies and similar technologies to enhance user experience and track usage. You can manage cookie preferences through your browser settings.
+              </span>
+            </div>
+            <div class="col-12 my-3">
+              <h5 class="text-decoration-underline">Your Choices</h5>
+              <span class="spacing-0">
+                <ul>
+                  <li>You can choose to: Opt-out of marketing communications</li>
+                  <li>Manage cookie preferences</li>
+                  <li>Access, correct, or delete your personal information</li>
+                </ul>
+              </span>
+            </div>
+            <div class="col-12 my-3">
+              <h5 class="text-decoration-underline">Security Measures</h5>
+              <span class="spacing-0">
+                We implement security measures to protect your information. However, no method of transmission over the Internet is completely secure, and we cannot guarantee absolute security.
+              </span>
+            </div>
+            <div class="col-12 my-3">
+              <h5 class="text-decoration-underline">Changes to this Privacy Policy</h5>
+              <span class="spacing-0">
+                We reserve the right to update this Privacy Policy. Changes will be effective upon posting the revised policy on our website.
+              </span>
+            </div>
+            <div class="col-12 my-3">
+              <h5 class="text-decoration-underline">Contact Information</h5>
+              <span class="spacing-0">
+                If you have questions or concerns about this Privacy Policy, please contact us at 
+                <a href="#" class="fw-medium">info@infidio.in</a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="terms_and_conditions" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 text-dark">Infidio Marketing Services - Terms and Conditions</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-dark">
+            <div class="mb-3">
+              <ul class="ps-3">
+                <li><strong>Client: </strong>Refers to individuals, businesses, or entities engaging with Infidio's marketing.</li>
+                <li><strong>Infidio: </strong>Refers to the marketing agency website created and managed by Harsund Group.</li>
+                <li><strong>Harsund Group:</strong>Refers to the proprietorship managing and operating Infidio.</li>
+              </ul>
+            </div>
+            <div class="col-12 my-3">
+              <h5 class="text-decoration-underline">Acceptance of Terms</h5>
+              <span class="spacing-0">
+                By accessing and using the marketing services provided by Harsund Group through the Infidio website, you agree to comply with and be bound by the following terms and conditions. If you do not agree to these terms, please refrain from using our services.
+              </span>
+            </div>
+            <div class="col-12 my-3">
+              <h5 class="text-decoration-underline">Description of Services</h5>
+              <span class="spacing-0">
+                Infidio offers a range of marketing services, including but not limited to digital marketing, social media marketing, content creation, and analytics. The specifics of the services will be detailed in the individual service agreements.
+              </span>
+            </div>
+            <div class="col-12 my-3">
+              <h5 class="text-decoration-underline">Service Agreement</h5>
+              <span class="spacing-0">
+                Clients must enter into a separate service agreement for each specific service requested. This agreement will outline the scope of work, deliverables, timelines, and any associated fees. The client agrees to adhere to the terms specified in the service agreement.
+              </span>
+            </div>
+            <div class="col-12 my-3">
+              <h5 class="text-decoration-underline">Fees and Payments</h5>
+              <span class="spacing-0">
+                Clients are responsible for the payment of all fees associated with the requested services as outlined in the service agreement. Payments must be made according to the agreed-upon schedule. Failure to make timely payments may result in the suspension or termination of services.
+              </span>
+            </div>
+            <div class="col-12 my-3">
+              <h5 class="text-decoration-underline">Intellectual Property</h5>
+              <span  class="spacing-0">
+                All intellectual property rights, including copyrights and trademarks, associated with the marketing servicesprovidedbyInfidioareownedbyHarsundGroup.Clientsaregranteda non-exclusive, non transferable license to use the deliverables for their intended purpose.
+              </span>
+            </div>
+            <div class="col-12 my-3">
+              <h5 class="text-decoration-underline">Confidentiality</h5>
+              <span class="spacing-0">
+                Both parties agree to keep any confidential information shared during the engagement confidential and not disclose it to third parties without written consent.
+              </span>
+            </div>
+            <div class="col-12 my-3">
+              <h5 class="text-decoration-underline">Termination</h5>
+              <span class="spacing-0">
+                Either party may terminate the service agreement with written notice if the other party breaches any material term of the agreement. In the event of termination,the client is still responsible for payment of any fees incurred up to the termination date.
+              </span>
+            </div>
+            <div class="col-12 my-3">
+              <h5 class="text-decoration-underline">Limitation of Liability</h5>
+              <span class="spacing-0">
+                Harsund Group shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or related to the services provided.
+              </span>
+            </div>
+            <div class="col-12 my-3">
+              <h5 class="text-decoration-underline">Governing Law</h5>
+              <span class="spacing-0">
+                These terms and conditions shall be governed by and construed per the laws. 10. Modifications
+                Infidio reserves the right to modify these terms and conditions at any time. Clients will be notified of any changes, and continued use of the services implies acceptance of the modified terms.
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="terms_and_conditions_for_affilated_links" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 text-dark">Infidio Marketing Services - Terms and Conditions</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-dark">
+            <div class="mb-3">
+              <ul class="ps-3">
+                <li><strong>Client: </strong>Refers to individuals, businesses, or entities engaging with Infidio's marketing.</li>
+                <li><strong>Infidio: </strong>Refers to the marketing agency website created and managed by Harsund Group.</li>
+                <li><strong>Harsund Group:</strong>Refers to the proprietorship managing and operating Infidio.</li>
+              </ul>
+            </div>
+            <div class="col-12 my-3">
+              <h5 class="text-decoration-underline">Acceptance of Terms</h5>
+              <span class="spacing-0">
+                By accessing or using the affiliated marketing services provided by Infidio, you agree to comply with and be bound by these Terms and Conditions
+              </span>
+            </div>
+            <div class="col-12 my-3">
+              <h5 class="text-decoration-underline">Affiliated Marketing Services</h5>
+              <span class="spacing-0">
+                <ul>
+                  <li>
+                    Infidio offers affiliated marketing services, which involve the promotion of products through affiliated links provided by various brands and e-commerce sites.
+                  </li>
+                  <li>
+                    Users are responsible for using affiliated links per the terms and conditions specified by the respective brands and e-commerce sites.
+                  </li>
+                </ul>
+              </span>
+            </div>
+            <div class="col-12 my-3">
+              <h5 class="text-decoration-underline">Influencer Marketing</h5>
+              <span class="spacing-0">
+                <ul>
+                  <li>
+                    Infidio may engage influencers to promote products. Influencers are required to use affiliated links provided by Infidio when promoting products.
+                  </li>
+                  <li>
+                    Compensation for influencers may be based on the performance of affiliated links, as specified in individual agreements.
+                  </li>
+                </ul>
+              </span>
+            </div>
+            <div class="col-12 my-3">
+              <h5 class="text-decoration-underline">User Obligations</h5>
+              <span class="spacing-0">
+                <ul>
+                  <li>
+                    Users and influencers must comply with the terms and conditions of the brands and e-commerce sites whose products are being promoted.
+                  </li>
+                  <li>
+                    Users and influencers must not engage in fraudulent or unethical practices, including but not limited to click fraud or misleading promotion.
+                  </li>
+                </ul>
+              </span>
+            </div>
+            <div class="col-12 my-3">
+              <h5 class="text-decoration-underline">Compensation and Payouts</h5>
+              <span class="spacing-0">
+                <ul>
+                  <li>
+                    Compensation for affiliated marketing services is subject to the terms outlined in individual agreements with users and influencers.
+                  </li>
+                  <li>
+                    Payouts are contingent on the successful tracking and validation of affiliated link activities.
+                  </li>
+                </ul>
+              </span>
+            </div>
+            <div class="col-12 border-bottom my-3">
+              <h5 class="text-decoration-underline">Termination</h5>
+              <span class="d-block mb-3 spacing-0">
+                Infidio reserves the right to terminate any user or influencer engagement for violation of these terms and conditions or for any other reason deemed appropriate by Infidio.
+              </span>
+            </div>
+            <div class="my-3">
+              <h4>Privacy Policy</h4>
+            </div>
+            <div class="col-12 my-3">
+              <h5 class="text-decoration-underline">Collection of Information</h5>
+              <span class="spacing-0">
+                <ul>
+                  <li>
+                    Infidio collects user and influencer information, including but not limited to contact details and
+payment information, to provide affiliated marketing services.
+                  </li>
+                  <li>
+                    Infidio may also collect data related to user and influencer activities, including clicks and
+conversions through affiliated links.
+                  </li>
+                </ul>
+              </span>
+            </div>
+            <div class="col-12 my-3">
+              <h5 class="text-decoration-underline">Use of Information</h5>
+              <span class="spacing-0">
+                <ul>
+                  <li>
+                    Information collected is used for the provision of affiliated marketing services, including tracking
+and validating affiliated link activities.
+                  </li>
+                  <li>
+                    Infidio may use aggregated and anonymized data for analytical and reporting purposes.
+                  </li>
+                </ul>
+              </span>
+            </div>
+            <div class="col-12 my-3">
+              <h5 class="text-decoration-underline">Third-Party Disclosure</h5>
+              <span class="spacing-0">
+                <ul>
+                  <li>
+                    Infidio may share user and influencer information with brands and e-commerce sites to track and
+validate affiliated link activities.
+                  </li>
+                  <li>
+                    Infidio does not sell or share personal information with third parties for their marketing purposes.
+                  </li>
+                </ul>
+              </span>
+            </div>
+            <div class="col-12 my-3">
+              <h5 class="text-decoration-underline">Security</h5>
+              <span class="spacing-0">
+                Infidio employs reasonable security measures to protect user and influencer information from
+unauthorized access or disclosure.
+              </span>
+            </div>
+            <div class="col-12 my-3">
+              <h5 class="text-decoration-underline">Changes to the Privacy Policy</h5>
+              <span class="spacing-0">
+                    Infidio reserves the right to update and modify this Privacy Policy. Users and influencers will be
+notified of any significant changes.
+              </span>
+            </div>
+            <div class="col-12">
+              <span class="spacing-0">
+                This is a general template, and you should adapt it to the specific details of your business and the
+applicable legal requirements. It is recommended to consult with a legal professional to ensure
+compliance with local laws and regulations.
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/popper.min.js"></script>
+    <script src="js/bundle.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script> -->
     <script src="https://use.fontawesome.com/364aedcfe8.js"></script>
   </body>
 </html>
